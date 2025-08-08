@@ -197,6 +197,7 @@ while countdown > 0:
 
 # Break and Continue in While Loops
 
+"""
 i = 0
 
 while i < 5:
@@ -209,7 +210,21 @@ while i < 5:
     
     print(i) # 0 1 2 
     
-   
+"""
 
+# Use Else in While Loop :
 
+i = 0 
 
+while i < 6:
+
+    i += 1
+    
+    if i == 3 :
+        continue
+
+    print(i) 
+
+    # i += 1
+else:
+    print("Loop completed without break")
