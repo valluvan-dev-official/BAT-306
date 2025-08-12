@@ -141,6 +141,7 @@ print(num)
 
 # With Argument :
 
+"""
 def add(x,y):
 
     z = x + y
@@ -153,3 +154,61 @@ b = 100
 print(add(10,20))
 
 print(add(a,b))
+
+"""
+
+
+# Example :
+
+"""
+def marriage(bride,groom):
+
+    print(bride," Weds ", groom)
+
+
+
+marriage("Jothika","Surya")
+
+marriage("Anushka","Virat")
+
+"""
+
+
+# Arguments :
+
+"""
+    - information can be passed into function is called as a arguments
+
+    dont's :
+
+        - function must be called with the correct number of arguments
+
+There are four types of arguments in Python:
+
+    1. Positional Arguments
+    2. Arbitrary Arguments
+    3. Keyword Arguments
+    4. Arbitrary Keyword Arguments
+
+
+"""
+
+# Arbitrary Arguments :
+
+"""
+    if the number of arguments is unknown add * before the parameter
+    use * for variable-length arguments
+"""
+
+def greeting_msg(*names):
+
+    for name in names:
+
+        print(f"hello, {name} welcome to our Resort ")
+
+
+
+greeting_msg("Deepika","Rajesh","Kumar","Arun")
+
+
+# greeting_msg("Rajesh")
