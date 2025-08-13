@@ -200,6 +200,7 @@ There are four types of arguments in Python:
     use * for variable-length arguments
 """
 
+"""
 def greeting_msg(*names):
 
     for name in names:
@@ -212,3 +213,239 @@ greeting_msg("Deepika","Rajesh","Kumar","Arun")
 
 
 # greeting_msg("Rajesh")
+
+"""
+
+
+# Keyword Arguments :
+
+"""
+   Arguments passed as key = value 
+   this way the order of the arguments does not match 
+
+"""
+
+"""
+def myfun(name, age):
+
+    print(f"{name} is {age} years old")
+
+
+myfun(age=30, name="Rajesh")
+
+myfun(name="John", age=25)
+
+"""
+
+# Arbitrary Keyword Arguments :
+
+""""
+ use ** for variable-length keyword arguments
+
+ if the number of keyword arguments is unknown add double ** before  the parameter
+
+"""
+
+# Example :
+
+"""
+def info(**details):
+
+    for key,value in details.items():
+        print(f"{key} : {value}")
+
+
+
+info(name = "John", age=25)
+
+info(age = 24, name = "Amar")
+
+"""
+
+# Default Argumetns :
+
+"""
+    Provide default values.
+    if we call the function without argument it uses the default value.
+
+"""
+# Example :
+
+"""
+def myfun(name = "John"): 
+
+    print("welcome ", name) 
+    
+    
+myfun("Deepika")
+myfun()
+myfun("Arun")
+
+""" 
+
+# Function Returning Multiple Values :
+
+# Example without multiple values :
+"""
+def myfun():
+    
+    a = 20
+    b = 30 
+    c = a + b
+
+    # return "Welcome to India"
+
+    return c
+
+print(myfun())
+
+"""
+
+# example with multiple vaues :
+
+"""def calculate(a,b):
+
+    addition = a + b
+    subtraction = a - b
+    multiplication = a * b
+    division = a / b
+
+    return addition, subtraction, multiplication, division
+
+# print(calculate(10,5))
+
+add,sub,mul,div = calculate(10,5) # (15,5,50,2.0)
+
+print("Addition:", add)
+print("Subtraction:", sub)
+print("Multiplication:", mul)
+print("Division:", div)
+"""
+
+# Example :
+
+"""
+def myfun():
+
+    print("Deepika")
+
+    return "Welcome to India"
+
+
+# print(myfun())
+
+text = myfun()
+
+print(text)
+
+"""
+
+# ========= Scope of Variables =========
+
+"""
+    a variable scope specifies the region where we can access a variable.
+
+    Based on the Scope, Python variablesinto three types :
+
+        1. Global scope
+        2. Local scope
+        3. Non local scope
+
+"""
+
+# Global Scope :
+
+"""
+    - a variable that is defined ouside a function has a global scope
+    - it can be accessed inside and outside the function
+
+"""
+
+"""
+name = "Amar"
+
+
+def myfun():
+
+    print("Inside the Function",name) 
+
+
+print("Outside the function",name)
+
+myfun()
+
+"""
+
+
+# Local Scope :
+
+"""
+    a variable that is defined inside a function has a local scope
+    it can only be accessed inside that function
+
+"""
+# Example :
+
+"""
+def myfun():
+
+    name = "Vijay"
+
+    print("Inside the Function", name)
+
+
+myfun()
+
+print("Outside the Function", name)
+
+"""
+
+# Non Local Scope :
+
+"""
+    - a variable that is defined in the outer function but not in the global scope is called non local variable
+"""
+
+# Example :
+
+"""
+def myfun():
+
+    name = "Thalapathy"
+
+    def greet():
+
+        print("Hello", name)
+
+    return greet()
+
+
+myfun()
+
+"""
+
+
+# ============ Lambda Function ============
+
+"""
+    a lambda function is a small anonymous function
+    it can take any number of arguments, but can only have one expression
+    it is defined using the lambda keyword
+    it is used to define small functions
+
+
+    Syntax :
+
+        lambda arguments : expression
+
+
+        lambda : keyword to define  a lambda function
+        arguments : input parameters for the function
+        expression : a single expression to be evaluated and returned
+
+"""
+
+
+x = lambda a,b : (a * b) + (a / b)
+
+print(x(10,2))
