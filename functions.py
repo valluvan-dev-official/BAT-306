@@ -446,6 +446,170 @@ myfun()
 """
 
 
-x = lambda a,b : (a * b) + (a / b)
+# x = lambda a,b : (a * b) + (a / b)
 
-print(x(10,2))
+# print(x(10,2))
+
+
+# ==============================================
+
+# Map :
+
+"""
+
+    oru function ah ella elements kku apply pannum
+
+    
+    Syntax :
+
+        map(function, iterable)
+
+"""
+
+# example :
+
+# numbers = [1,2,3,4]
+
+# nums = [5,6,7,8]
+
+"""
+def square(x):
+
+    return x * x
+
+result = map(square, numbers)
+
+print(list(result))
+
+"""
+
+# Using map in Lambda :
+
+# result = tuple(map(lambda x : x * x , numbers))
+
+# print(result)
+
+
+# =====================
+
+# filter()
+
+"""
+Syntax :
+
+    filter(function, iterable)
+
+    function -> True / False Return Pannum
+    function = None , Truthy elements return pannum
+
+
+Truthy Elements :
+
+    - Elements that are considered True in a boolean context
+    - Examples: Non-empty strings, non-zero numbers, non-empty lists, etc.
+
+Falsy Elements:
+
+        - Elements that are considered False in a boolean context
+        - Examples: Empty strings, zero, None, empty lists, etc.
+
+"""
+
+# example :
+
+"""
+numbers = [10,15,20,25,30]
+
+even_numbers = filter(lambda x : x % 2 == 0, numbers)
+
+print(list(even_numbers))
+
+"""
+
+# Example :
+
+"""
+words = ["Hi",""," ","Welcome","","Python"]
+
+result = filter(None, words)
+
+print(list(result))
+
+"""
+
+# Reduce :
+
+from functools import reduce 
+
+"""
+reduce(function,iterable,initializer)
+
+function(acc,cur)
+
+"""
+
+#nums = [1,2,3,4]
+
+
+# result = reduce(lambda acc, x : acc + x, nums)
+
+
+"""
+==> 0 + 1 = 1
+
+acc = 1
+
+=> 1 + 2 = 3
+
+acc = 3 
+
+=> 3 + 3 = 6
+
+acc = 6
+
+=> 6 + 4 = 10
+
+"""
+
+# print(result)
+
+
+
+# ======== Lambda function sorting ========
+
+
+"""
+students = [("John", 25), ("Jane", 22), ("Dave", 23), ("Alice", 24)]
+
+# Sort by age :
+
+sorted_students = sorted(students,key = lambda x : x[1])
+
+print(sorted_students)
+
+"""
+
+# ======= Conditional Expression in Lambda ========
+
+"""
+Syntax :
+
+    lambda arguments : value_if_true if condition else value_if_false
+
+"""
+
+# Check Even or Odd :
+
+result = lambda x : "Even" if x % 2 == 0 else "Odd"
+
+num = int(input("Enter Num : "))
+
+print(result(num))
+
+
+
+
+
+
+
+
