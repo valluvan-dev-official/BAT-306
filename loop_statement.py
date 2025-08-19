@@ -214,6 +214,7 @@ while i < 5:
 
 # Use Else in While Loop :
 
+"""
 i = 0 
 
 while i < 6:
@@ -228,3 +229,18 @@ while i < 6:
     # i += 1
 else:
     print("Loop completed without break")
+
+"""
+
+
+data = ["Apple","","Orange","Mango","","Papaya"]
+
+cleaned_data = []
+
+
+for item in data: 
+    
+    if item:  # Check if item is not empty
+        cleaned_data.append(item)
+
+print("Cleaned Data:", cleaned_data)
