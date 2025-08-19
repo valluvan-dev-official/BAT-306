@@ -58,6 +58,7 @@
 
 """
 # print(x)
+"""
 try :
     print(x)
 
@@ -70,3 +71,57 @@ else:
 
 finally:
     print("Execution Completed")
+
+    """
+# ======================
+
+"""
+try:
+
+    x = 10/"hello"
+    print(x)
+
+except ZeroDivisionError as e:
+    print("Division by zero error occurred:", e)
+
+except Exception as e:
+    print("An Error Occurred", e)
+
+"""
+
+# Creating Custom Exception :
+
+"""
+class NegativeNumberError(Exception):
+    pass
+
+# Custom Exception Handling Example
+
+try:
+
+    num = int(input("Enter a Positive Number : "))
+
+    if num < 0:
+
+        raise NegativeNumberError("Negative numbers are not allowed")
+    
+except NegativeNumberError as e:
+    print("Custom Exception Occurred:", e)
+
+else:
+    print("Numbers --> ",num)
+
+finally:
+    print("Execution Completed")
+
+"""
+
+# Built-ins in Python :
+
+errors = dir(locals()['__builtins__'])
+
+print(len(errors))
+
+print(errors)
+
+

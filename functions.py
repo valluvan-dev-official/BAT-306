@@ -600,15 +600,30 @@ Syntax :
 
 # Check Even or Odd :
 
+"""
 result = lambda x : "Even" if x % 2 == 0 else "Odd"
 
 num = int(input("Enter Num : "))
 
 print(result(num))
 
+"""
+
+# =========== Multiple Iterables in Map ===========
+
+# shortest length varaikkum tha run aagum
 
 
+"""
+x = [10,20,30,40,50,60]
 
+y = [1,2,3,4]
+
+
+result = list(map(lambda x,y : x * y, x,y))
+print(result)
+
+"""
 
 
 
