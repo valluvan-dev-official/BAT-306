@@ -233,6 +233,7 @@ for filename in filenames:
 
 # Working with Binary :
 
+"""
 f = open("img1.jpeg",'rb')
 
 data = f.read()
@@ -243,3 +244,26 @@ f1 = open("Thanos.jpeg","wb")
 
 f1.write(data)
 f1.close()
+
+"""
+
+
+# Exception Handling in File Operation :
+
+try:
+    f = open("news1.txt",'x')
+
+    try:
+
+        f.write("Welcome to File Handling")
+
+    except:
+        print("Somthing happen when write a file")
+
+    finally:
+        f.close()
+
+
+except Exception as e:
+
+    print("Something happen when open a file",e)
