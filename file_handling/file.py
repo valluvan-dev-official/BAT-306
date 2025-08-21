@@ -121,8 +121,109 @@ print(f.tell())
 
 # Seek :
 
+"""
 f.seek(10)
 
 print(f.read(10))
 
 print(f.tell())
+
+"""
+
+
+# Context Manager :
+
+"""
+with open("sam.txt",'r') as f:
+    print(f.read(10))
+
+print(f.read(10))
+
+"""
+
+# Writing Multiple Lines to a file :
+
+"""
+lines = ["Hello, this is line 1.", "\nHello, this is line 2.", "\nHello, this is line 3."]
+
+with open("new_file.txt",'w') as x:
+
+    x.writelines(lines)
+
+"""
+
+
+# File handling with CSV
+
+import csv
+
+# Creating a csv file
+
+"""
+with open("sample.csv", 'w') as csvfile:
+
+    w = csv.writer(csvfile)
+    w.writerow(["Roll-No","Name","Marks"])
+    w.writerow([1,"John",85])
+    w.writerow([2,"Jane",90])
+    w.writerow([3,"Doe",78])
+"""
+
+# Read a csv File :
+
+"""
+with open("sample.csv",'r') as f:
+
+    reader = csv.reader(f)
+
+    # print(r)
+
+    for data in reader:
+        
+        for i in data:
+            print(i)
+
+"""
+
+"""
+f = open("sample.csv")
+
+reader = csv.reader(f)
+
+l = list(reader)
+
+# print(l)
+
+for line in l:
+    # print(line)
+
+    for data in line:
+        # print(data)
+        print(data,end = " ")
+    print()
+
+"""
+
+
+from zipfile import *
+
+"""
+with ZipFile("demo.zip","w") as z:
+    z.write("sample.txt")
+
+"""
+
+# with ZipFile("demo.zip",'r') as z:
+#     z.extractall("extracted_files")
+
+
+f = ZipFile("demo.zip", 'r',ZIP_STORED)
+
+filenames = f.namelist()
+# print(filenames)
+
+for filename in filenames:
+    if filename == "sample.txt":
+        f1 = open("sample.txt")
+        print(f1.read())
+        f1.close()
