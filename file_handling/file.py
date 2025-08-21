@@ -217,6 +217,7 @@ with ZipFile("demo.zip","w") as z:
 #     z.extractall("extracted_files")
 
 
+"""
 f = ZipFile("demo.zip", 'r',ZIP_STORED)
 
 filenames = f.namelist()
@@ -227,3 +228,18 @@ for filename in filenames:
         f1 = open("sample.txt")
         print(f1.read())
         f1.close()
+
+"""
+
+# Working with Binary :
+
+f = open("img1.jpeg",'rb')
+
+data = f.read()
+
+# print(data)
+
+f1 = open("Thanos.jpeg","wb")
+
+f1.write(data)
+f1.close()
