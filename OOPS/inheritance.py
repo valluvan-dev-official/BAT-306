@@ -147,7 +147,9 @@ print(Varun.name)
 """
     Hierarchical Inheritance Occurs when multiple child classes inherit from a single parent class.
 """
-# 
+# Example :
+
+"""
 class Father:
 
     name = "John"
@@ -190,4 +192,61 @@ Tina.Scooter()
 
 Tina.Car()
 
+"""
 
+# Hybrid Inheritance :
+
+"""
+    - Combines multiple types of inheritance in a single Program
+
+"""
+
+# example :
+
+"""
+class Grandfather:
+
+    def House(self):
+
+        print("Grandfather's House")
+
+
+class Father(Grandfather):
+
+    def Car(self):
+        print("Father's Car")
+
+
+class Son(Father):
+
+    def Bike(self):
+        print("Son's Bike")
+
+
+class Daughter(Father):
+
+    def Scooter(self):
+        print("Daughter's Scooter")
+
+"""
+
+# Try it :
+
+
+class a:
+    ...
+
+class b:
+    ...
+
+class c(a):
+    ...
+
+class d(a,b):
+    ...
+
+class e(a):
+    ...
+
+class z(d):
+    ...
