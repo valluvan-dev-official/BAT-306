@@ -106,8 +106,8 @@ Arun = Person("Arun",25,"Chennai")
 # print(Arun.my_age)
 # print(Arun.my_address)
 # Arun.info()
-
-Deepika = Person("Deepika",28,"Bangalore")
+x = "Deepika"
+Deepika = Person(x,28,"Bangalore")
 Deepika.info()
 Deepika.display_info()
 
