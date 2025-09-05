@@ -44,3 +44,40 @@ def myfun():
 myfun()
 
 """
+
+
+# Examples :
+
+def Upperstring(func):
+
+    def process():
+
+        data = func()
+
+        return data.upper()
+    
+    return process
+
+
+def Split(func):
+
+    def process():
+
+        data = func()
+
+        return data.split()
+
+    return process
+
+
+
+
+@Split
+@Upperstring
+def myfunc():
+
+    return "Welcome to python"
+
+# name = input("Enter Txt : ")
+
+print(myfunc())
